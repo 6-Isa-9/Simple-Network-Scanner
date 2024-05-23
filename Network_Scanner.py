@@ -13,7 +13,7 @@ def scan(ip):
     ether = Ether(dst="ff:ff:ff:ff:ff:ff")
     packet = ether/arp
 
-    result = srp(packet, timeout=3, verbose=0)[0]
+    result = srp(packet, timeout=5, verbose=0)[0]
 
     devices = []
     for sent, received in result:
