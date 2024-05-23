@@ -13,7 +13,7 @@ This is a simple network scanner tool that allows to scan for all the devices in
 2. Before running the program, make sure Npcap software is installed, [click here to install Npcap.](https://npcap.com)
 3. Once Npcap and all other libraries are installed, run the program through the terminal with the following command:
    ```
-   python Network_Scanner.py -t {target IP with network mask}
+   python Network_Scanner.py -t {target network IP with network mask}
 
    # like this
    python Network_Scanner.py -t 192.168.100.105/24
