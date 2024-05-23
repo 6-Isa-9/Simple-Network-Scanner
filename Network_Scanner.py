@@ -1,4 +1,4 @@
-import argparse, requests
+import argparse, requests, time
 from bs4 import BeautifulSoup
 from scapy.all import ARP, Ether, srp
 
@@ -28,6 +28,8 @@ def print_result(devices):
         print(f"{device['ip']}\t\t{device['mac']}\t\t{get_vendor(device['mac'])}")
 
 def get_vendor(mac):
+    time.sleep(1.5)
+    
     response = requests.get("https://aruljohn.com/mac/" + mac.replace(":", ""))
     soup = BeautifulSoup(response.text, 'html.parser')
 
